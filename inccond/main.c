@@ -154,7 +154,7 @@ int main()
 
         i2c_write_blocking(I2C_PORT, addr, &bus_voltage, 1, false);
         i2c_read_blocking(I2C_PORT, addr, voltage_i2c, 2, false);
-        voltage_val = (((voltage_i2c[0] << 5) | (voltage_i2c[1] >> 3))*4)/1000;
+        voltage_val = ((voltage_i2c[0] << 5) | (voltage_i2c[1] >> 3))*4;
 
         level = (unsigned int) mppt_incond(voltage_val, current_val);
 

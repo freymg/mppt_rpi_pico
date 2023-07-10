@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 set(PICO_SDK_PATH "/Users/fredmg/pico/pico-sdk")
 include(pico_sdk_import.cmake)
 
-project(led)
+project(inccond)
 pico_sdk_init()
 
 add_executable(${PROJECT_NAME} main.c)
